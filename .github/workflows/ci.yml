@@ -60,7 +60,7 @@ jobs:
       - name: Lint + tests + typecheck + build
         run: npm run pack:check
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: out-${{ matrix.os }}
           path: out/
@@ -114,7 +114,7 @@ jobs:
       - name: Empaquetage
         run: npm run ${{ matrix.script }}
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: dist-${{ matrix.os }}
           path: |
